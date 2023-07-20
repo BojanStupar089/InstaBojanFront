@@ -1,0 +1,10 @@
+.users-list {
+  position: absolute;
+  max-width: 500px;
+  min-width: 30vw;
+  background-color: white;
+  z-index: 100;
+  top: 4rem;
+  border: 2px solid #dbdbdb;
+  border-radius: 4px;
+}

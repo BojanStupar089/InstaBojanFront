@@ -1,0 +1,11 @@
+#single-post-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 80vh;
+    max-height: 85vh;
+    margin: 1rem;
+    padding-left: 13vw;
+    padding-right: 13vw;
+    justify-content: center;
+}
+

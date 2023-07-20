@@ -1,0 +1,15 @@
+#exploreFeed {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    min-width: 60vw;
+    max-width: 70vw;
+    align-items: center;
+    padding: 0px;
+}
+
+.exploreImg {
+    width: 100px;
+    aspect-ratio: 1/1;
+}

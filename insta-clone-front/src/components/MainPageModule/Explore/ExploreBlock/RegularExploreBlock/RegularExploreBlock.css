@@ -1,0 +1,31 @@
+.regular-explore-block {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    min-width: 400px;
+    justify-content: center;
+}
+
+
+.explore-post-container {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    aspect-ratio: 1/1;
+}
+
+.explore-post {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.explore-post-container:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.explore-post-container:hover .overlay {
+    opacity: 1;
+}

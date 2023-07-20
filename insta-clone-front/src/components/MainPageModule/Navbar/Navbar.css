@@ -1,0 +1,35 @@
+.my-navbar {
+    height: 4rem;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: white;
+  }
+  
+  .navbar-brand {
+    margin-left: 3rem;
+    font-weight: bold;
+  }
+
+  .my-search {
+    width: 20%;
+    min-width: 200px;
+  }
+
+  .my-search input {
+    background-color: #EFEFEF;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .my-search input:focus{
+    background-color: #EFEFEF;
+    border: none;
+  }
+
+  .options {
+    width: 20%;
+    min-width: 200px;
+  }
+
+  .options a {
+    margin-left: 1rem;
+  }

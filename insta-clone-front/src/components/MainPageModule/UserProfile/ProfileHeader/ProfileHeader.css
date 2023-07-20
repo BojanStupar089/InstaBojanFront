@@ -1,0 +1,76 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  max-width: fit-content;
+  min-width: 500px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-container {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin-right: 5rem;
+
+}
+
+.profile-img {
+  height: 200px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 8px double rgb(180, 180, 180);
+}
+
+.usernameHeader {
+  max-width: fit-content;
+  font-weight: 200;
+  font-size: xx-large;
+}
+
+.info-val {
+  margin-right: 0.5rem;
+  max-width: fit-content;
+}
+
+.number {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.name {
+  margin-top: 1rem;
+  font-weight: bold;
+  max-width: fit-content;
+}
+
+.bio {
+  width: fit-content;
+  max-width: 50vw;
+  min-width: 300px;
+}
+
+.small {
+  width: 30%;
+  height: 60%;
+}
+
+.space-between {
+  justify-content: space-between;
+  align-items: center;
+  min-width: fit-content;
+}

@@ -1,0 +1,42 @@
+.suggestion {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+    border: 2px solid #dfdfdf;
+    border-radius: 5px;
+    margin: 0.5rem;
+    width: 13.3rem;
+}
+
+.suggestion-username {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.suggestion-username:hover {
+    cursor: pointer;
+}
+
+.suggestion-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.suggestion-follow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.suggestion-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.suggestion-header:hover {
+    cursor: pointer;
+}
+
+.maloDesno {}

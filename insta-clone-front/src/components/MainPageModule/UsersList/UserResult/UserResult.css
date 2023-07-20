@@ -1,0 +1,30 @@
+.user-result {
+  margin-top: 1rem;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+
+.user-result:hover {
+  cursor: pointer;
+  background-color: rgb(218, 218, 218);
+  transition: 0.5s ease all;
+}
+
+.slicica {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 2px solid rgb(182, 182, 182);
+}
+
+.user-name {
+  color: gray;
+}
+
+.username {
+  color: black;
+  font-size: 1.3rem;
+}

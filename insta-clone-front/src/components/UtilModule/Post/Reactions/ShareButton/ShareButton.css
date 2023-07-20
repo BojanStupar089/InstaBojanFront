@@ -1,0 +1,8 @@
+.share {
+    margin-right: 1rem;
+}
+
+.share:hover {
+    cursor: pointer;
+    color: grey
+}

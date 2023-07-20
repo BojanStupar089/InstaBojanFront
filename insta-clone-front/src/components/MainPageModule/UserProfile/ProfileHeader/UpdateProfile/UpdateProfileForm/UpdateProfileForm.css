@@ -1,0 +1,25 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    height: 100vh;
+    margin-top:50px;
+   
+  }
+
+
+  .img-cont {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-right: 5rem;
+  
+  }
+  
+  .prof-img {
+    height: 100px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 8px double rgb(180, 180, 180);
+  }
