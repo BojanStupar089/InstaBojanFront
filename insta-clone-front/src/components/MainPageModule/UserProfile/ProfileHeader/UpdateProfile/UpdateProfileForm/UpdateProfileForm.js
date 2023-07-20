@@ -7,14 +7,12 @@ import { getProfileInfo } from "../../../../../../services/UserService";
 import {Input} from "../../../../../UtilModule/Input/Input";
 import  "./UpdateProfileForm.css";
 import {ImageLoader} from "../../../../../UtilModule/ImageLoader/ImageLoader";
-import useProfileHeader from "../../../../../../helpers/hooks/useProfileHeader";
 import { updateProfile } from "../../../../../../services/UserService";
 
 
 const schema=yup.object().shape({
-
-  // userName:yup.string().required("obavezno polje"),
-   name:yup.string().required("obavezno polje"),
+   
+   profileName:yup.string().required("obavezno polje"),
    profilePicture:yup.string()
 
 })
@@ -26,7 +24,7 @@ export const UpdateProfileForm=()=>{
 
   const [fileString,setFileString]=useState("");
   const[selectedImage,setSelectedImage]=useState(null);
-  const[name,setName]=useState("");
+  const[profileName,setProfileName]=useState("");
   const[profilePicture,setProfilePicture]=useState("");
 
   const navigate=useNavigate();
@@ -36,7 +34,7 @@ export const UpdateProfileForm=()=>{
 
   getProfileInfo(userName).then((res)=>{
 
-       setName(res.data.name);
+       setProfileName(res.data.profileName);
        setProfilePicture(res.data.profilePicture);
 
   }).catch((err)=>{
@@ -53,9 +51,8 @@ export const UpdateProfileForm=()=>{
    
    const updatedProfile={
 
-      //userName:data.userName,
       userName:userName,
-      name:data.name,
+      profileName:data.profileName,
       profilePicture:fileString||profilePicture
    };
      updateProfile(userName,updatedProfile).then((res)=>{
@@ -96,11 +93,8 @@ export const UpdateProfileForm=()=>{
    
 
        <div className="col">
-         {/*
-       <label htmlFor="userName" className="form-label">Username</label>
-   <Input type={"text"} className="form-control" placeholder="Username" name="userName" register={register} errors={errors}  defaultValue={userName} style={{width:'200px'}}/>*/}
-        <label htmlFor="name" className="form-label">Profile Name</label>
-       <Input type={"text"} className="form-control" placeholder="profileName" name="name" register={register} errors={errors} defaultValue={name}  style={{width:'200px'}}  />
+      <label htmlFor="profileName" className="form-label">Profile Name</label>
+       <Input type={"text"} className="form-control" placeholder="profileName" name="profileName" register={register} errors={errors} defaultValue={profileName}  style={{width:'200px'}}  />
        </div>
          
 

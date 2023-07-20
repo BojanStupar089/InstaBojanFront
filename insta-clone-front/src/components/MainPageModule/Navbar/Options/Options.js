@@ -1,7 +1,7 @@
 import { REACT_APP_URL } from "../../../../helpers/constants";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+//import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import { Option } from "./Option/Option";
@@ -17,10 +17,10 @@ export const Options = () => {
         icon={<AddBoxOutlinedIcon />}
       />
 
-      <Option
+     {/*<Option
         redirect={`${REACT_APP_URL}/explore`}
         icon={<FavoriteBorderOutlinedIcon />}
-      />
+  />*/}
 
       <Option
         redirect={`${REACT_APP_URL}/profiles/${getDecodedUsername()}`}

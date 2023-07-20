@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { ImageLoader } from "../../../UtilModule/ImageLoader/ImageLoader";
 import { Input } from "../../Input/Input";
-import { LocationSelect } from "../../../UtilModule/LocationSelect/LocationSelect";
-import { Categories } from "../Categories/Categories";
+//import { LocationSelect } from "../../../UtilModule/LocationSelect/LocationSelect";
+//import { Categories } from "../Categories/Categories";
 
 import "./AddPostForm.css";
 
@@ -16,11 +16,11 @@ const schema = yup.object().shape({
 });
 export const AddPostForm = ({ onSubmit }) => {
   const [fileString, setFileString] = useState("");
-  const [categories, setCategories] = useState([]);
-  const [locationName, setLocationName] = useState("");
-  const [location, setLocation] = useState(null);
+  //const [categories, setCategories] = useState([]);
+  //const [locationName, setLocationName] = useState("");
+  //const [location, setLocation] = useState(null);
 
- const setValue = (value) => {
+ /*const setValue = (value) => {
     if (categories.includes(value)) {
       setCategories(categories.filter((x) => x !== value));
     } else {
@@ -29,6 +29,7 @@ export const AddPostForm = ({ onSubmit }) => {
       setCategories(cat);
     }
   };
+  */
 
 
   const {
@@ -42,13 +43,14 @@ export const AddPostForm = ({ onSubmit }) => {
   
   const preOnSubmit = (data) => {
     data.picture = fileString;
-   
+   /*
    { if (locationName) {
       location.locationName = locationName;
     }
     data.location = location;
     data.categories = categories;
   }
+  */
 
     onSubmit(data);
   }
@@ -82,9 +84,9 @@ export const AddPostForm = ({ onSubmit }) => {
           errors={errors}
         />
 
-        <LocationSelect setLocation={setLocation} />
+        {/*<LocationSelect setLocation={setLocation} />*/}
 
-        <Input
+        {/*<Input
           type={"text"}
           className="form-control"
           placeholder="Location name"
@@ -92,8 +94,8 @@ export const AddPostForm = ({ onSubmit }) => {
           register={register}
           errors={errors}
           onChange={(e) => setLocationName(e.target.value)}
-        />
-        <Categories categories={categories} setValue={setValue} />
+          />*/}
+       {/* <Categories categories={categories} setValue={setValue} />*/}
           
 
         <div className="form-group align-self-end">
