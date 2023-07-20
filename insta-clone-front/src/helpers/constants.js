@@ -4,7 +4,7 @@ export const SPRING_APP_URL = "https://localhost:7216";
 export const LIKE = "LIKE";
 export const DISLIKE = "DISLIKE";
 export const LAUGH = "LAUGH";
-export const ANGRY = "ANGRY";
+//export const ANGRY = "ANGRY";
 //export const SAD = "SAD";
 
 export const REACTIONS = ["LIKE", "DISLIKE", "LAUGH", "ANGRY", "SAD"];
