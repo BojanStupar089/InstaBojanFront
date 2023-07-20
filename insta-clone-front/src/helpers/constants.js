@@ -5,7 +5,7 @@ export const LIKE = "LIKE";
 export const DISLIKE = "DISLIKE";
 export const LAUGH = "LAUGH";
 export const ANGRY = "ANGRY";
-export const SAD = "SAD";
+//export const SAD = "SAD";
 
 export const REACTIONS = ["LIKE", "DISLIKE", "LAUGH", "ANGRY", "SAD"];
 
