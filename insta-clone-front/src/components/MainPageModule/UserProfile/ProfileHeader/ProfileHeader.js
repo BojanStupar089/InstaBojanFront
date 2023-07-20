@@ -18,7 +18,6 @@ const ProfileHeader = ({ userName }) => {
   const [
     loggedInUser,
     ProfileName,
-    Bio,
     ProfilePicture,
     PostsNumber,
     FollowerNumber,
@@ -52,7 +51,6 @@ const ProfileHeader = ({ userName }) => {
                   FollowerNumber={ FollowerNumber}
                   FollowingNumber={ FollowingNumber}
                   ProfileName={ ProfileName}
-                  Bio={Bio}
                   loggedInUser={loggedInUser}
                   setFollowVal={setFollowVal} 
                   setFollowerNumber={setFollowerNumber}

@@ -15,8 +15,8 @@ export const UserResult = ({ user }) => {
         src={user.profilePicture}
         height="50px"
       />
-      <span className="username">{user.userName}</span>
-      <span className="user-name">{user.name}</span>
+      <span className="username">{user.profileName}</span>
+      <span className="user-name">{user.userName}</span>
     </div>
   );
 };

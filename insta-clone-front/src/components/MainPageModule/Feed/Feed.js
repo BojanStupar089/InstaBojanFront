@@ -4,7 +4,7 @@ import "./Feed.css";
 import InfiniteScroll from "react-infinite-scroller";
 import { getFeed } from "../../../services/PostService.js";
 import { useInfiniteScroll } from "../../../helpers/hooks/useInfiniteScroll.js";
-import FriendSuggestion from "../../UtilModule/FriendSuggestion/FriendSuggestion";
+
 
 const Feed = () => {
   const { data, pageNumber, hasMore, loadFunc } = useInfiniteScroll(
@@ -17,9 +17,7 @@ const Feed = () => {
   return (
     <div className="feed-container">
       <div className="feed">
-        <div className="centerItems">
-          <FriendSuggestion></FriendSuggestion>
-        </div>
+        
         <InfiniteScroll
           pageStart={pageNumber}
           loadMore={loadFunc}

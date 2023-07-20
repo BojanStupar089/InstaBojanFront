@@ -2,7 +2,6 @@ import React from 'react'
 import { useParams } from 'react-router'
 import ProfileHeader from './ProfileHeader/ProfileHeader'
 import UserPosts from './UserPosts/UserPosts'
-import FriendSuggestion from '../../UtilModule/FriendSuggestion/FriendSuggestion'
 import "./UserProfile.css"
 import { useState,useEffect } from 'react'
 import { checkIfUserFollowsUser } from '../../../services/UserService'
@@ -31,7 +30,7 @@ const UserProfile = () => {
         <ProfileHeader userName={userName} />
         {loggedInUser===userName || followsUser ?( <UserPosts userName={userName} />):null}
         <div className="centerItems">
-          <FriendSuggestion numOfSuggs={4}></FriendSuggestion>
+         
         </div>
 
       </div>

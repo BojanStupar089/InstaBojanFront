@@ -9,7 +9,6 @@ import NotFound from "../components/MainPageModule/NotFoundPage/NotFoundPage";
 import Registration from "../components/AuthModule/Registration/Registration";
 import ResetPassword from "../components/AuthModule/ResetPassword/ResetPassword";
 import UserProfile from "../components/MainPageModule/UserProfile/UserProfile";
-import Explore from "../components/MainPageModule/Explore/Explore";
 import SinglePost from "../components/UtilModule/Post/SinglePost/SinglePost";
 import { UpdateProfileForm } from "../components/MainPageModule/UserProfile/ProfileHeader/UpdateProfile/UpdateProfileForm/UpdateProfileForm";
 import { UpdatePostForm } from "../components/UtilModule/Post/UpdatePostForm/UpdatePostForm";
@@ -93,16 +92,7 @@ const MyRoutes = () => {
           />
         }
       />
-      <Route
-        exact
-        path="/explore"
-        element={
-          <ProtectedRoute
-            component={<Explore />}
-            navigate={<Navigate to={"/login"} />}
-          />
-        }
-      />
+     
       <Route
         exact
         path="/post/:postId"
@@ -116,7 +106,7 @@ const MyRoutes = () => {
 
       <Route exact path="/updatepost/:postId"  element={<ProtectedRoute component={<UpdatePostForm/>} navigate={<Login/>}/>} />
 
-      <Route exact path="/update/:userName" element={<ProtectedRoute component={<UpdateProfileForm/>}navigate={<Login/>}/>} />
+      <Route exact path="/updateProfile/:userName" element={<ProtectedRoute component={<UpdateProfileForm/>}navigate={<Login/>}/>} />
 
       
       <Route exact path="*" element={<NotFound />} />

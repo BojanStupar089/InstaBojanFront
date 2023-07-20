@@ -23,7 +23,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="my-navbar navbar sticky-top navbar-light justify-content-around">
+      <nav className="my-navbar navbar sticky-top navbar-light justify-content-around crs">
         <Brand height={"30px"} />
         <SearchBar search={search} setQuery={setQuery} />
         {users.length !== 0 && <UsersList users={users} />}

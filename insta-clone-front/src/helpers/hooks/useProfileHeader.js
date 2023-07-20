@@ -10,7 +10,7 @@ import { SPRING_APP_URL } from "../../helpers/constants";
 
 export const useProfileHeader = (userName) => {
   const [ProfileName, setProfileName] = useState("");
-  const [Bio, setBio] = useState("");
+  
   const [ProfilePicture, setProfilePicture] = useState("");
   const [PostsNumber, setPostsNumber] = useState(0);
   const [FollowerNumber, setFollowerNumber] = useState(0);
@@ -33,7 +33,6 @@ export const useProfileHeader = (userName) => {
         setPostsNumber(res.data.postsNumber);
         setFollowerNumber(res.data.followersNumber);
         setFollowingNumber(res.data.followingNumber);
-        setBio(res.data.bio);
         setProfilePicture(res.data.profilePicture);
       
         
@@ -50,7 +49,7 @@ export const useProfileHeader = (userName) => {
     getDecodedUsername(),
    //loggedInUser,
     ProfileName,
-    Bio,
+   
     ProfilePicture,
     PostsNumber,
     FollowerNumber,

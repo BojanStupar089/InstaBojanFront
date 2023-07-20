@@ -15,7 +15,6 @@ const UserBio = ({...params}) => {
     FollowerNumber, 
     FollowingNumber, 
     ProfileName, 
-    Bio,
     loggedInUser,                   
     setFollowVal,
     setFollowerNumber,
@@ -62,7 +61,7 @@ const UserBio = ({...params}) => {
                 <span className="number">{FollowingNumber}</span>following</span>
             </div>
             <p className="name">{ProfileName}</p>
-            <p className="bio"> {Bio}</p>
+           
           </div>  
       )
 }

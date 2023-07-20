@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { ImageLoader } from "../../../UtilModule/ImageLoader/ImageLoader";
 import { Input } from "../../../UtilModule/Input/Input";
-import { LocationSelect } from "../../../UtilModule/LocationSelect/LocationSelect";
+
 
 const schema = yup.object().shape({
   password: yup

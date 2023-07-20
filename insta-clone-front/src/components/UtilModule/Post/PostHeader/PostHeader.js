@@ -2,7 +2,7 @@ import React from 'react'
 import { Avatar } from '@material-ui/core'
 import "./PostHeader.css"
 
-const PostHeader = ({ username, profilePic, location }) => {
+const PostHeader = ({ username, profilePic}) => {
 
   const seeProfile = () => window.location.href = `/profiles/${username}`
 
@@ -17,7 +17,7 @@ const PostHeader = ({ username, profilePic, location }) => {
         <div className='col'>
           <h3 className='post-header-username'>{username}&nbsp;<span>•</span></h3>
           <div className='location-tag-container'>
-            <span className='location-tag'>{location}</span>
+            {/*<span className='location-tag'>{location}</span>*/}
           </div>
         </div>
       </div>

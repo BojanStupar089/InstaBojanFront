@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getOnePost,deletePost } from "../../../../../services/PostService.js";
 import PostHeader from "../../PostHeader/PostHeader.js";
-import { PostContext } from "../../../../../helpers/contexts/PostContext.js";
-import ReactionsBar from "../../Reactions/ReactionsBar.js";
-import AddComment from "../../AddComment/AddComment.js";
-import TagRibbon from '../../TagRibbon/TagRibbon'
 import {IconButton,Menu,MenuItem} from '@mui/material';
 import {MoreVert} from '@mui/icons-material';
 import {useNavigate} from 'react-router-dom';
@@ -15,7 +11,7 @@ import "./SinglePostView.css";
 
 const SinglePostView = ({ postId }) => {
   const [Post, setPost] = useState({});
-  const [likes, setLikes] = useState(0);
+  
 
   const[anchorEl,setAnchorEl]=useState(null);
 
@@ -27,7 +23,7 @@ const SinglePostView = ({ postId }) => {
       .then((res) => {
         if (res.data) {
           setPost(res.data);
-          setLikes(res.data.numOfReactions);
+          
         }
       })
       .catch((err) => {
@@ -56,7 +52,7 @@ const SinglePostView = ({ postId }) => {
 
     deletePost(postId).then(()=>{
 
-      //alert("Post deleted successfully!");
+      
       navigate("/home")
       handleClose();
     }).catch((err)=>{
@@ -108,19 +104,10 @@ const SinglePostView = ({ postId }) => {
                 <span className="username">@{Post.userName}</span> {Post.text}
               </p>
             </div>
-            <TagRibbon tags={Post.categories} datetime={Post.time}></TagRibbon>
+            
           </div>
-          <div className="single-post-comment-container">
-            <div></div>
-            <div className="reactions-comment-container">
-              <PostContext.Provider
-                value={{ entityId: postId, likes, setLikes }}
-              >
-                <ReactionsBar likes={likes} postId={Post.id} />
-              </PostContext.Provider>
-              <AddComment />
-            </div>
-          </div>
+         
+          
         </div>
       </div>
     </>
