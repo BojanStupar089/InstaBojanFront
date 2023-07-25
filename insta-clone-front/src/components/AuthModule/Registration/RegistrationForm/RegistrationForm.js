@@ -18,17 +18,14 @@ const schema = yup.object().shape({
       return this.parent.password === value;
     }),
   email: yup.string().required("Obavezno polje").email("Unesite validan mejl!"),
-  name: yup.string().required("Obavezno polje"),
- // bio: yup.string(),
+  profileName: yup.string().required("Obavezno polje"),
   profilePicture: yup.string(),
- // location: yup.object(),
   gender: yup.string(),
   birthday: yup.date(),
 });
 
 export const RegistrationForm = ({ onSubmit }) => {
   const [fileString, setFileString] = useState("");
- // const [location, setLocation] = useState(null);
   const [gender, setGender] = useState("MALE");
 
   const {
@@ -41,7 +38,6 @@ export const RegistrationForm = ({ onSubmit }) => {
 
   const preOnSubmit = (data) => {
     data.profilePicture = fileString;
-  //  data.location = location;
     data.gender = gender;
     onSubmit(data);
   };
@@ -94,20 +90,13 @@ export const RegistrationForm = ({ onSubmit }) => {
         <Input
           type={"text"}
           className="form-control"
-          placeholder="Name"
-          name="name"
+          placeholder="Profile Name"
+          name="profileName"
           register={register}
           errors={errors}
         />
 
-        {/* <Input
-          type={"text"}
-          className="form-control"
-          placeholder="Bio"
-          name="bio"
-          register={register}
-          errors={errors}
-        /> */}
+       
       </div>
 
       <div className="col">
@@ -122,7 +111,7 @@ export const RegistrationForm = ({ onSubmit }) => {
               onChange={() => setGender("MALE")}
               checked
             />
-            <label className="form-check-label" for="flexRadioDefault1">
+            <label className="form-check-label" htmlFor="flexRadioDefault1">
               Male
             </label>
           </div>
@@ -134,7 +123,7 @@ export const RegistrationForm = ({ onSubmit }) => {
               id="flexRadioDefault2"
               onChange={() => setGender("FEMALE")}
             />
-            <label className="form-check-label" for="flexRadioDefault2">
+            <label className="form-check-label" htmlFor="flexRadioDefault2">
               Female
             </label>
           </div>
@@ -150,12 +139,12 @@ export const RegistrationForm = ({ onSubmit }) => {
           errors={errors}
         />
 
-      {/* //  <LocationSelect setLocation={setLocation} /> */}
+      
 
-        <ImageLoader setFileString={setFileString} title="Profilna slika" />
+        <ImageLoader setFileString={setFileString} title="Profile Picture" />
 
         {fileString && (
-          <div class="img-preview">
+          <div className="img-preview">
             <img v-if="profilePicture" src={fileString} alt="slika" />
           </div>
         )}

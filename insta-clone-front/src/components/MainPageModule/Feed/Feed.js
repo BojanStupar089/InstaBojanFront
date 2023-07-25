@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PostContainer from "../../UtilModule/Post/PostContainer/PostContainer";
 import "./Feed.css";
 import InfiniteScroll from "react-infinite-scroller";
@@ -13,6 +13,9 @@ const Feed = () => {
     4,
     getFeed
   );
+
+
+ 
 
   return (
     <div className="feed-container">

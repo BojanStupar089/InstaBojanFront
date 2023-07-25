@@ -6,12 +6,6 @@ export const getFeed = (pageNumber,pageSize) => {
   return axios.get(postUrl+`feed?page=${pageNumber}&size=${pageSize}`);
 };
 
-
-
-export const getExplore = (pageNumber, pageSize) => {
-  return axios.get(postUrl + `explore?page=${pageNumber}&size=${pageSize}`);
-};
-
 export const getMyPosts = (pageNumber, pageSize) => {
   return axios.get(postUrl + `my-posts?page=${pageNumber}&size=${pageSize}`);
 };
@@ -38,10 +32,3 @@ export const getUserPosts = (username,page, size) => {
   );
 };
 
-export const sharePost = (postId) => {
-  return axios.post(`${postUrl}share/${postId}`);
-};
-
-export const reload = () => {
-  return axios.get(`${postUrl}reload`);
-};

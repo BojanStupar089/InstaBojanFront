@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PostHeader from "../PostHeader/PostHeader";
 import "./PostContainer.css";
 import { REACT_APP_URL } from "../../../../helpers/constants.js";
+import { PostContext } from "../../../../helpers/contexts/PostContext";
 
 
 const PostContainer = ({ post }) => {
@@ -24,6 +25,8 @@ const PostContainer = ({ post }) => {
         src={post.picture}
         onClick={() => viewPost(post.id)}
       ></img>
+
+      <PostContext.Provider value={{entityId:post.id}}></PostContext.Provider>
      
       <div className="post-description">
         <p>

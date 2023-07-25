@@ -16,9 +16,14 @@ export const useInfiniteScroll = (
       
       const newData = [...data, ...result.data];
     
+      
       if (newData.length >= result.data.totalElements) {
-        setHasMore(false);
+     
+           setHasMore(false);
+        
       }
+      
+      
       setData(newData);
       setPageNumber(pageNumber + 1);
     });
@@ -26,3 +31,5 @@ export const useInfiniteScroll = (
 
   return { data, pageNumber, hasMore, loadFunc };
 };
+
+

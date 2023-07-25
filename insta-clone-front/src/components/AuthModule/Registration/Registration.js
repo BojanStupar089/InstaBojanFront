@@ -22,7 +22,7 @@ const Registration = () => {
         );
       })
       .catch(() => {
-        toast.error("Username/email vec postoji!");
+        toast.error("Username already exists!");
       });
   };
 
